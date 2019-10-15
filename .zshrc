@@ -34,9 +34,6 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 export PHANTOMJS_MIRROR="https://npm.taobao.org/mirrors/phantomjs"
 
-# 配置私有 npm
-alias tnpm='cnpm --registry=http://rnpm.hz.netease.com/ --registryweb=http://npm.hz.netease.com/ --cache=$HOME/.nenpm/.cache --userconfig=$HOME/.nenpmrc'
-
 # 配置 antojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
@@ -44,7 +41,7 @@ alias tnpm='cnpm --registry=http://rnpm.hz.netease.com/ --registryweb=http://npm
 alias gb="git branch"
 alias gc="git checkout"
 alias ga="git add -A"
-alias gs="git status"
+alias gs="git status --short"
 alias gp="git pull "
 alias gm="git commit -m"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
