@@ -45,4 +45,3 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗
 ➜ "
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})
 ➜ "
-
