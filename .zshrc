@@ -1,3 +1,8 @@
+# 使用 zshprof 分析性能
+# PS4=$'\\\011%D{%s%6.}\011%x\011%I\011%N\011%e\011'
+# exec 3>&2 2>/tmp/zshstart.$$.log
+# setopt xtrace prompt_subst
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -57,8 +62,7 @@ alias tree5="tree -aL 5 -I node_modules"
 # 配置 VSCode
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
 
-
-# 配置 nvm
+# 配置 nvm 非常影响 item2 性能
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -80,4 +84,8 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
 fi
+
+# 使用 zshprof 分析性能
+# unsetopt xtrace
+# exec 2>&3 3>&-
 
